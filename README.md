@@ -12,6 +12,17 @@ stays quiet on legitimate high-value activity.
 Everything runs locally on a laptop CPU. No external API, LLM or GPU is needed, and no
 secrets are used.
 
+## 🎬 Demo video (2 min)
+
+[![Fraud Intelligence demo: a ₹5,00,000 legit transfer scores 0 (ALLOW) while a ₹48,000 account takeover scores 98 (BLOCK)](demo/thumbnail.jpg)](demo/fraud-intelligence-demo.mp4)
+
+**[▶ Watch the demo video](demo/fraud-intelligence-demo.mp4)** (`demo/fraud-intelligence-demo.mp4`, 2:08, 1080p, with voice-over and captions).
+It walks through the live monitor, a transaction investigation with all three risk scores,
+the network graph, fraud ring FR-001, explainable AI, recommended actions, the
+false-positive test (legit ₹5,00,000 → ALLOW vs ₹48,000 takeover → BLOCK), a sample
+input → output, and the evaluation results. Every product shot is a real screen capture of
+the running dashboard.
+
 ---
 
 ## Results at a glance
@@ -126,6 +137,13 @@ information available at the time of the transaction.
 
 Two real rows from the committed dataset (`data/transactions.csv`) and what the system
 produced for them (`outputs/transaction_scores.csv.gz`).
+
+**Runnable samples:** the [`samples/`](samples/) folder has 4 real input rows
+(`sample_input.csv`) and 3 brand-new transactions (`new_transactions.csv`) that are scored
+live against the history. Run `python samples/run_samples.py` to regenerate
+[`samples/sample_output.md`](samples/sample_output.md) and `samples/sample_output.json`, which
+hold each input with its three risk scores, final risk, band, action, evidence and
+explanation.
 
 ### Example 1: an ordinary-looking purchase that is part of a fraud ring
 
@@ -332,6 +350,8 @@ fraud/pipeline.py            orchestration → outputs/
 data_gen/generate.py         synthetic data with 10 fraud scenarios and benign look-alikes
 eval/evaluate.py             scorecard vs hidden labels;  eval/robustness.py  unseen seeds
 tests/                       unit tests and dashboard smoke tests
+samples/                     sample input → output (run_samples.py, inputs, generated outputs)
+demo/                        2-minute demo video + thumbnail
 ```
 
 ## Scope note
@@ -372,7 +392,7 @@ tests/                       unit tests and dashboard smoke tests
 
 - **Locally:** `streamlit run app.py`, then follow the *Demo flow* above or the in-app **Demo Guide** page.
 - **Hosted:** deploy to Streamlit Community Cloud (see above) and share the URL.
-- **Recorded demo:** _add the video link here._
+- **Recorded demo:** [demo/fraud-intelligence-demo.mp4](demo/fraud-intelligence-demo.mp4) (2:08, 1080p, voice-over + captions).
 
 ## Limitations
 

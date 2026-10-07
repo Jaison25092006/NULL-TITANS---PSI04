@@ -1,0 +1,4 @@
+txn_id,timestamp,account_id,txn_type,channel,merchant_id,payee_account_id,amount_inr,device_id,ip_address,city,country
+NEW-001,2026-09-30 14:10:00,A0024,transfer,netbanking,,A0544,500000,D0027,,Chennai,IN
+NEW-002,2026-09-30 02:37:00,A0350,transfer,upi,,A0548,48000,D-9981,203.0.113.7,New Delhi,IN
+NEW-003,2026-09-30 18:05:00,A0108,purchase,pos,M001,,1200,,,Hyderabad,IN

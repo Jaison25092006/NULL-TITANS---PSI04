@@ -1,0 +1,5 @@
+txn_id,timestamp,account_id,txn_type,channel,merchant_id,payee_account_id,amount_inr,device_id,ip_address,city,country
+T030351,2026-09-14 10:00:05,A0555,purchase,online,M030,,4759.64,D0662,104.60.61.96,Delhi,IN
+T005934,2026-08-09 16:49:30,A0086,transfer,netbanking,,A0544,584304.14,D0101,107.166.245.38,Pune,IN
+T018760,2026-08-28 14:27:26,A0201,purchase,online,M025,,42171.85,D0700,102.101.72.42,Hyderabad,IN
+T000010,2026-08-01 06:47:21,A0108,purchase,pos,M001,,1351.76,,,Hyderabad,IN

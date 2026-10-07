@@ -1,0 +1,352 @@
+[
+  {
+    "source": "batch pipeline (outputs/)",
+    "input": {
+      "txn_id": "T030351",
+      "timestamp": "2026-09-14 10:00:05",
+      "account_id": "A0555",
+      "txn_type": "purchase",
+      "merchant_id": "M030",
+      "merchant_name": "GiftHub Digital",
+      "payee_account_id": "",
+      "amount_inr": 4759.64,
+      "device_id": "D0662",
+      "city": "Delhi",
+      "country": "IN",
+      "channel": "online"
+    },
+    "output": {
+      "transaction_risk": 61.6,
+      "behavioral_risk": 16.2,
+      "network_risk": 98.2,
+      "final_risk": 98.2,
+      "band": "CRITICAL",
+      "action": "BLOCK + INVESTIGATE",
+      "guardrail": "network",
+      "ring_id": "FR-001",
+      "ml_probability": 0.9141,
+      "why": [
+        "✓ Amount 3.7× account average — ₹4,760 vs typical ₹1,299",
+        "✓ High transaction velocity — far more transactions than this account's daily norm",
+        "✓ Connected to high-risk account — network risk 98/100",
+        "✓ Similar transaction sequence detected — same steps, same order, same time window as other ring members",
+        "✓ ML model: resembles confirmed fraud — probability 91%"
+      ],
+      "reasons": [
+        {
+          "code": "FIRST_RISKY_CATEGORY",
+          "weight": 0.15,
+          "layer": "rule",
+          "evidence": "first ever gift cards purchase on this account"
+        },
+        {
+          "code": "ML_MODEL",
+          "weight": 0.548,
+          "layer": "model",
+          "evidence": "Random Forest trained on confirmed fraud cases rates this 91% likely to be fraud"
+        },
+        {
+          "code": "RING_EVIDENCE",
+          "weight": 0.982,
+          "layer": "network",
+          "evidence": "part of the evidence linking FR-001 (11 accounts): same purchase sequence"
+        }
+      ],
+      "explanation": "T030351 is CRITICAL risk (98/100) because it is part of the evidence linking fraud ring FR-001 (11 accounts repeating the same purchase sequence, paying the same beneficiary, sharing devices), the amount is 3.7× the account's normal spending, and the ML model rates it 91% similar to confirmed fraud."
+    }
+  },
+  {
+    "source": "batch pipeline (outputs/)",
+    "input": {
+      "txn_id": "T005934",
+      "timestamp": "2026-08-09 16:49:30",
+      "account_id": "A0086",
+      "txn_type": "transfer",
+      "merchant_id": "",
+      "merchant_name": "",
+      "payee_account_id": "A0544",
+      "amount_inr": 584304.14,
+      "device_id": "D0101",
+      "city": "Pune",
+      "country": "IN",
+      "channel": "netbanking"
+    },
+    "output": {
+      "transaction_risk": 5.0,
+      "behavioral_risk": 9.3,
+      "network_risk": 0.0,
+      "final_risk": 4.6,
+      "band": "LOW",
+      "action": "ALLOW",
+      "guardrail": "none",
+      "ring_id": "",
+      "ml_probability": 0.0428,
+      "why": [
+        "✓ Amount 5.6× account average — ₹584,304 vs typical ₹104,618"
+      ],
+      "reasons": [
+        {
+          "code": "NEW_PAYEE",
+          "weight": 0.05,
+          "layer": "rule",
+          "evidence": "first transfer to A0544"
+        }
+      ],
+      "explanation": "T005934 is LOW risk (5/100). Some signals were observed (the amount is 5.6× the account's normal spending), but not enough independent evidence to act. High amount alone is insufficient evidence: ₹584,304 matches context (this account's comparable transactions average ₹104,618; known device and beneficiary patterns)."
+    }
+  },
+  {
+    "source": "batch pipeline (outputs/)",
+    "input": {
+      "txn_id": "T018760",
+      "timestamp": "2026-08-28 14:27:26",
+      "account_id": "A0201",
+      "txn_type": "purchase",
+      "merchant_id": "M025",
+      "merchant_name": "MegaByte Store",
+      "payee_account_id": "",
+      "amount_inr": 42171.85,
+      "device_id": "D0700",
+      "city": "Hyderabad",
+      "country": "IN",
+      "channel": "online"
+    },
+    "output": {
+      "transaction_risk": 97.5,
+      "behavioral_risk": 54.5,
+      "network_risk": 0.0,
+      "final_risk": 97.5,
+      "band": "CRITICAL",
+      "action": "BLOCK + INVESTIGATE",
+      "guardrail": "transaction",
+      "ring_id": "",
+      "ml_probability": 0.8313,
+      "why": [
+        "✓ New device — device D0700 not in this account's history",
+        "✓ Amount 35.7× account average — ₹42,172 vs typical ₹1,183",
+        "✓ High transaction velocity — far more transactions than this account's daily norm",
+        "✓ Statistical anomaly — more unusual than 99.6% of baseline activity",
+        "✓ ML model: resembles confirmed fraud — probability 83%"
+      ],
+      "reasons": [
+        {
+          "code": "NEW_DEVICE",
+          "weight": 0.15,
+          "layer": "rule",
+          "evidence": "device D0700 never used by this account before"
+        },
+        {
+          "code": "AMOUNT_SPIKE_NEW_DEVICE",
+          "weight": 0.35,
+          "layer": "rule",
+          "evidence": "unusually large amount on a device the customer has never used"
+        },
+        {
+          "code": "VELOCITY",
+          "weight": 0.25,
+          "layer": "rule",
+          "evidence": "9 transactions in the past hour"
+        },
+        {
+          "code": "CARD_TEST_CASHOUT",
+          "weight": 0.85,
+          "layer": "rule",
+          "evidence": "large purchase minutes after a burst of tiny test payments on the same device"
+        },
+        {
+          "code": "ANOMALY",
+          "weight": 0.2,
+          "layer": "anomaly",
+          "evidence": "more unusual than 99.6% of baseline activity (Isolation Forest on amount, time, device, velocity and profile deviation)"
+        },
+        {
+          "code": "ML_MODEL",
+          "weight": 0.499,
+          "layer": "model",
+          "evidence": "Random Forest trained on confirmed fraud cases rates this 83% likely to be fraud"
+        }
+      ],
+      "explanation": "T018760 is CRITICAL risk (98/100) because it is part of a card-testing pattern (tiny test payments, then a large purchase), the amount is 35.7× the account's normal spending, it originates from a newly observed device, and the ML model rates it 83% similar to confirmed fraud."
+    }
+  },
+  {
+    "source": "batch pipeline (outputs/)",
+    "input": {
+      "txn_id": "T000010",
+      "timestamp": "2026-08-01 06:47:21",
+      "account_id": "A0108",
+      "txn_type": "purchase",
+      "merchant_id": "M001",
+      "merchant_name": "FreshBasket",
+      "payee_account_id": "",
+      "amount_inr": 1351.76,
+      "device_id": "",
+      "city": "Hyderabad",
+      "country": "IN",
+      "channel": "pos"
+    },
+    "output": {
+      "transaction_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "network_risk": 0.0,
+      "final_risk": 0.0,
+      "band": "LOW",
+      "action": "ALLOW",
+      "guardrail": "none",
+      "ring_id": "",
+      "ml_probability": 0.0283,
+      "why": [],
+      "reasons": [],
+      "explanation": "T000010 is LOW risk (0/100): consistent with this account's normal behaviour."
+    }
+  },
+  {
+    "source": "live scoring of a new transaction",
+    "input": {
+      "txn_id": "NEW-001",
+      "timestamp": "2026-09-30 14:10:00",
+      "account_id": "A0024",
+      "txn_type": "transfer",
+      "merchant_id": "",
+      "merchant_name": "",
+      "payee_account_id": "A0544",
+      "amount_inr": 500000.0,
+      "device_id": "D0027",
+      "city": "Chennai",
+      "country": "IN",
+      "channel": "netbanking"
+    },
+    "output": {
+      "transaction_risk": 0.0,
+      "behavioral_risk": 0.0,
+      "network_risk": 0.0,
+      "final_risk": 0.0,
+      "band": "LOW",
+      "action": "ALLOW",
+      "guardrail": "none",
+      "ring_id": "",
+      "ml_probability": 0.0168,
+      "why": [],
+      "reasons": [],
+      "explanation": "NEW-001 is LOW risk (0/100): it is consistent with this account's normal behaviour. High amount alone is insufficient evidence: ₹500,000 matches context (this account's comparable transactions average ₹382,334; known device and beneficiary patterns)."
+    }
+  },
+  {
+    "source": "live scoring of a new transaction",
+    "input": {
+      "txn_id": "NEW-002",
+      "timestamp": "2026-09-30 02:37:00",
+      "account_id": "A0350",
+      "txn_type": "transfer",
+      "merchant_id": "",
+      "merchant_name": "",
+      "payee_account_id": "A0548",
+      "amount_inr": 48000.0,
+      "device_id": "D-9981",
+      "city": "New Delhi",
+      "country": "IN",
+      "channel": "upi"
+    },
+    "output": {
+      "transaction_risk": 89.5,
+      "behavioral_risk": 76.7,
+      "network_risk": 98.2,
+      "final_risk": 98.2,
+      "band": "CRITICAL",
+      "action": "BLOCK + INVESTIGATE",
+      "guardrail": "network",
+      "ring_id": "FR-001",
+      "ml_probability": 0.9585,
+      "why": [
+        "✓ New device — device D-9981 not in this account's history",
+        "✓ Amount 27.8× account average — ₹48,000 vs typical ₹1,726",
+        "✓ Unusual transaction time — at 02:37, outside this account's usual hours",
+        "✓ Unusual location — New Delhi, IN not seen before for this account",
+        "✓ Suspicious beneficiary — A0548 collects from many accounts / passes money on",
+        "✓ Connected to high-risk account — network risk 98/100",
+        "✓ Similar transaction sequence detected — same steps, same order, same time window as other ring members",
+        "✓ Statistical anomaly — more unusual than 100.0% of baseline activity",
+        "✓ ML model: resembles confirmed fraud — probability 96%"
+      ],
+      "reasons": [
+        {
+          "code": "NEW_DEVICE",
+          "weight": 0.15,
+          "layer": "rule",
+          "evidence": "device D-9981 never used by this account before"
+        },
+        {
+          "code": "AMOUNT_SPIKE_NEW_DEVICE",
+          "weight": 0.35,
+          "layer": "rule",
+          "evidence": "unusually large amount on a device the customer has never used"
+        },
+        {
+          "code": "NIGHT_ACTIVITY",
+          "weight": 0.2,
+          "layer": "rule",
+          "evidence": "transaction at 02:00; this account almost never transacts at night"
+        },
+        {
+          "code": "NEW_PAYEE_LARGE",
+          "weight": 0.3,
+          "layer": "rule",
+          "evidence": "first transfer to A0548, and the amount is unusually large"
+        },
+        {
+          "code": "ANOMALY",
+          "weight": 0.2,
+          "layer": "anomaly",
+          "evidence": "more unusual than 100.0% of baseline activity"
+        },
+        {
+          "code": "ML_MODEL",
+          "weight": 0.575,
+          "layer": "model",
+          "evidence": "Random Forest trained on confirmed fraud cases rates this 96% likely to be fraud"
+        },
+        {
+          "code": "RING_EVIDENCE",
+          "weight": 0.982,
+          "layer": "network",
+          "evidence": "transfer to A0548, the collecting (mule) account of FR-001 (11 accounts)"
+        }
+      ],
+      "explanation": "NEW-002 is CRITICAL risk (98/100) because it is part of the evidence linking fraud ring FR-001 (11 accounts repeating the same purchase sequence, paying the same beneficiary, sharing devices), the amount is 27.8× the account's normal spending, it originates from a newly observed device, and it comes from New Delhi, a location this account has not used."
+    }
+  },
+  {
+    "source": "live scoring of a new transaction",
+    "input": {
+      "txn_id": "NEW-003",
+      "timestamp": "2026-09-30 18:05:00",
+      "account_id": "A0108",
+      "txn_type": "purchase",
+      "merchant_id": "M001",
+      "merchant_name": "FreshBasket",
+      "payee_account_id": "",
+      "amount_inr": 1200.0,
+      "device_id": "",
+      "city": "Hyderabad",
+      "country": "IN",
+      "channel": "pos"
+    },
+    "output": {
+      "transaction_risk": 0.0,
+      "behavioral_risk": 9.4,
+      "network_risk": 0.0,
+      "final_risk": 2.4,
+      "band": "LOW",
+      "action": "ALLOW",
+      "guardrail": "none",
+      "ring_id": "",
+      "ml_probability": 0.0101,
+      "why": [
+        "✓ Unusual transaction time — at 18:05, outside this account's usual hours",
+        "✓ High transaction velocity — far more transactions than this account's daily norm"
+      ],
+      "reasons": [],
+      "explanation": "NEW-003 is LOW risk (2/100). Some signals were observed (it happened at 18:05, outside the account's usual hours), but not enough independent evidence to act."
+    }
+  }
+]
