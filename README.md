@@ -14,6 +14,10 @@ secrets are used.
 
 ## 🎬 Demo video (2 min)
 
+
+https://github.com/user-attachments/assets/eab615c9-60c0-456b-b61a-1b977d89b66a
+
+
 [![Fraud Intelligence demo: a ₹5,00,000 legit transfer scores 0 (ALLOW) while a ₹48,000 account takeover scores 98 (BLOCK)](demo/thumbnail.jpg)](demo/fraud-intelligence-demo.mp4)
 
 **[▶ Watch the demo video](demo/fraud-intelligence-demo.mp4)** (`demo/fraud-intelligence-demo.mp4`, 2:08, 1080p, with voice-over and captions).
