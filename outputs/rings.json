@@ -1,0 +1,2235 @@
+[
+  {
+    "ring_id": "FR-001",
+    "members": [
+      "A0548",
+      "A0551",
+      "A0552",
+      "A0553",
+      "A0554",
+      "A0555",
+      "A0556",
+      "A0557",
+      "A0558",
+      "A0559",
+      "A0560"
+    ],
+    "size": 11,
+    "pattern": "Coordinated purchase ring: accounts in different places, on different devices, repeat the same unusual purchase sequence; money collected by a mule that passes it straight on to gift cards / crypto",
+    "edges": [
+      {
+        "a": "A0555",
+        "b": "A0551",
+        "kinds": [
+          "linked_device",
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "linked_device",
+            "detail": "device D0692 newly appeared on 3 established accounts within 0.3h"
+          },
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0555",
+        "b": "A0553",
+        "kinds": [
+          "linked_device",
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "linked_device",
+            "detail": "device D0692 newly appeared on 3 established accounts within 0.3h"
+          },
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0555",
+        "b": "A0552",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0555",
+        "b": "A0554",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0555",
+        "b": "A0556",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0555",
+        "b": "A0557",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0555",
+        "b": "A0558",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0555",
+        "b": "A0559",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0555",
+        "b": "A0560",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0555",
+        "b": "A0548",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b918,181 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0559",
+        "b": "A0551",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0559",
+        "b": "A0552",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0559",
+        "b": "A0553",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0559",
+        "b": "A0554",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0559",
+        "b": "A0556",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0559",
+        "b": "A0557",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0559",
+        "b": "A0558",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0559",
+        "b": "A0560",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0559",
+        "b": "A0548",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b919,615 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0552",
+        "b": "A0554",
+        "kinds": [
+          "linked_device",
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          },
+          {
+            "kind": "linked_device",
+            "detail": "device D0693 newly appeared on 3 established accounts within 0.2h"
+          }
+        ]
+      },
+      {
+        "a": "A0552",
+        "b": "A0556",
+        "kinds": [
+          "linked_device",
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          },
+          {
+            "kind": "linked_device",
+            "detail": "device D0693 newly appeared on 3 established accounts within 0.2h"
+          }
+        ]
+      },
+      {
+        "a": "A0552",
+        "b": "A0551",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0552",
+        "b": "A0553",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0552",
+        "b": "A0557",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0552",
+        "b": "A0558",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0552",
+        "b": "A0560",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0552",
+        "b": "A0548",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b911,997 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0557",
+        "b": "A0551",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0557",
+        "b": "A0553",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0557",
+        "b": "A0554",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0557",
+        "b": "A0556",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0557",
+        "b": "A0558",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0557",
+        "b": "A0560",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0557",
+        "b": "A0548",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b917,702 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0558",
+        "b": "A0551",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0558",
+        "b": "A0553",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0558",
+        "b": "A0554",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0558",
+        "b": "A0556",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0558",
+        "b": "A0560",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0558",
+        "b": "A0548",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b912,914 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0553",
+        "b": "A0551",
+        "kinds": [
+          "linked_device",
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "linked_device",
+            "detail": "device D0692 newly appeared on 3 established accounts within 0.3h"
+          },
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0553",
+        "b": "A0554",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0553",
+        "b": "A0556",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0553",
+        "b": "A0560",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0553",
+        "b": "A0548",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b915,427 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0556",
+        "b": "A0554",
+        "kinds": [
+          "linked_device",
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          },
+          {
+            "kind": "linked_device",
+            "detail": "device D0693 newly appeared on 3 established accounts within 0.2h"
+          }
+        ]
+      },
+      {
+        "a": "A0556",
+        "b": "A0551",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0556",
+        "b": "A0560",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0556",
+        "b": "A0548",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b916,736 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0560",
+        "b": "A0551",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0560",
+        "b": "A0554",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0560",
+        "b": "A0548",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b913,616 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0554",
+        "b": "A0551",
+        "kinds": [
+          "same_sequence"
+        ],
+        "evidence": [
+          {
+            "kind": "same_sequence",
+            "detail": "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0554",
+        "b": "A0548",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b912,553 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0548",
+        "b": "A0551",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b918,653 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      }
+    ],
+    "score": 0.912,
+    "evidence_kinds": {
+      "linked_device": 6,
+      "same_sequence": 45,
+      "mule_payee": 10,
+      "coordinated_timing": 1,
+      "dna_similarity": 1,
+      "rapid_movement": 1
+    },
+    "evidence": [
+      "device D0692 newly appeared on 3 established accounts within 0.3h",
+      "device D0693 newly appeared on 3 established accounts within 0.2h",
+      "same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)",
+      "sent \u20b911,997 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b912,553 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b912,914 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b913,616 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b915,427 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b916,736 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b917,702 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b918,181 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b918,653 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b919,615 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+    ],
+    "mules": [
+      "A0548"
+    ],
+    "evidence_txns": [
+      "T030351",
+      "T030354",
+      "T030355",
+      "T030357",
+      "T030358",
+      "T030360",
+      "T030361",
+      "T030363",
+      "T030364",
+      "T030366",
+      "T030367",
+      "T030369",
+      "T030370",
+      "T030371",
+      "T030375",
+      "T030376",
+      "T030377",
+      "T030379",
+      "T030380",
+      "T030382",
+      "T030384",
+      "T030385",
+      "T030386",
+      "T030388",
+      "T030390",
+      "T030392",
+      "T030393",
+      "T030394",
+      "T030395",
+      "T030397",
+      "T030398",
+      "T030399",
+      "T030400",
+      "T030401",
+      "T030402",
+      "T030404",
+      "T030405",
+      "T030407",
+      "T030408",
+      "T030411",
+      "T030440",
+      "T030441",
+      "T030460",
+      "T030463",
+      "T030496",
+      "T030544",
+      "T030608",
+      "T030681",
+      "T030691",
+      "T030709"
+    ],
+    "synthetic_identities": [],
+    "ring_risk": 98.2,
+    "band": "CRITICAL",
+    "evidence_breakdown": [
+      {
+        "kind": "same_sequence",
+        "label": "Same purchase sequence",
+        "weight": 0.6,
+        "detail": "45 account links \u00b7 e.g. same purchase sequence GiftHub Digital \u2192 VoltX Gadgets \u2192 CoinSwift Exchange (10 accounts)"
+      },
+      {
+        "kind": "mule_payee",
+        "label": "Common beneficiary (mule)",
+        "weight": 0.6,
+        "detail": "10 account links \u00b7 e.g. sent \u20b911,997 to A0548, which passed 100% of its inflows to gift cards/crypto within 24h"
+      },
+      {
+        "kind": "linked_device",
+        "label": "Linked controller device",
+        "weight": 0.45,
+        "detail": "6 account links \u00b7 e.g. device D0692 newly appeared on 3 established accounts within 0.3h"
+      },
+      {
+        "kind": "coordinated_timing",
+        "label": "Coordinated timing",
+        "weight": 0.5,
+        "detail": "10 of 10 accounts active within 14 minutes"
+      },
+      {
+        "kind": "dna_similarity",
+        "label": "Behavioural similarity (Fraud DNA)",
+        "weight": 0.4,
+        "detail": "average pairwise behavioural similarity 91%"
+      },
+      {
+        "kind": "rapid_movement",
+        "label": "Rapid fund movement",
+        "weight": 0.3,
+        "detail": "beneficiary passed funds on to crypto/gift cards 0.8h after receiving them (median)"
+      }
+    ],
+    "devices": [
+      "D0692",
+      "D0693"
+    ],
+    "all_devices": [
+      "D0652",
+      "D0655",
+      "D0656",
+      "D0657",
+      "D0658",
+      "D0659",
+      "D0660",
+      "D0661",
+      "D0662",
+      "D0663",
+      "D0664",
+      "D0665",
+      "D0666",
+      "D0667",
+      "D0668",
+      "D0669",
+      "D0692",
+      "D0693"
+    ],
+    "merchants": [
+      "CoinSwift Exchange",
+      "GiftHub Digital",
+      "VoltX Gadgets"
+    ],
+    "beneficiaries": [
+      "A0548"
+    ],
+    "locations": [
+      "Bengaluru",
+      "Chennai",
+      "Coimbatore",
+      "Delhi",
+      "Hyderabad",
+      "Kochi",
+      "Mumbai",
+      "Pune"
+    ],
+    "collusive_merchants": [],
+    "peak_window": {
+      "members_active": 10,
+      "span_min": 14.3,
+      "start": "2026-09-14 10:00:05",
+      "end": "2026-09-14 10:14:24"
+    },
+    "dna_similarity": 0.907,
+    "first_seen": "2026-09-14 10:00:05",
+    "last_seen": "2026-09-14 15:42:46",
+    "amount_inr": 526854.64,
+    "recommended_action": "BLOCK + INVESTIGATE (critical ring)",
+    "actions": [
+      {
+        "step": "Freeze suspicious pathway",
+        "detail": "Block outgoing payouts from beneficiary/mule account(s) A0548 and hold inbound transfers to them."
+      },
+      {
+        "step": "Investigate linked accounts",
+        "detail": "Open one case for 10 member accounts: A0551, A0552, A0553, A0554, A0555, A0556, A0557, A0558, A0559, A0560."
+      },
+      {
+        "step": "Review shared devices",
+        "detail": "Check device fingerprints D0692, D0693 for other accounts; block the device IDs for new sign-ups."
+      },
+      {
+        "step": "Review beneficiaries",
+        "detail": "Verify beneficiaries A0548; flag them for confirmation-of-payee warnings."
+      },
+      {
+        "step": "Escalate to fraud analyst",
+        "detail": "Assign to the financial-crime team; file a suspicious transaction report if the investigation confirms coordinated fraud."
+      }
+    ]
+  },
+  {
+    "ring_id": "FR-002",
+    "members": [
+      "A0549",
+      "A0561",
+      "A0562",
+      "A0563",
+      "A0564",
+      "A0565",
+      "A0566",
+      "A0567",
+      "A0568"
+    ],
+    "size": 9,
+    "pattern": "Device farm: newly opened (likely synthetic) accounts operated from the same phones / network; money collected by a mule that passes it straight on to gift cards / crypto",
+    "edges": [
+      {
+        "a": "A0565",
+        "b": "A0561",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0670 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0565",
+        "b": "A0563",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0670 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0565",
+        "b": "A0567",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0670 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0565",
+        "b": "A0562",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0565",
+        "b": "A0564",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0565",
+        "b": "A0566",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0565",
+        "b": "A0568",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0565",
+        "b": "A0549",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b98,015 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0567",
+        "b": "A0561",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0670 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0567",
+        "b": "A0563",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0670 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0567",
+        "b": "A0562",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0567",
+        "b": "A0564",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0567",
+        "b": "A0566",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0567",
+        "b": "A0568",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0567",
+        "b": "A0549",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b922,550 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0549",
+        "b": "A0561",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b910,766 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0549",
+        "b": "A0562",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b910,387 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0549",
+        "b": "A0563",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b928,750 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0549",
+        "b": "A0564",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b98,642 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0549",
+        "b": "A0566",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b96,563 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0549",
+        "b": "A0568",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b95,697 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0566",
+        "b": "A0562",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0671 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0566",
+        "b": "A0564",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0671 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0566",
+        "b": "A0568",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0671 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0566",
+        "b": "A0561",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0566",
+        "b": "A0563",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0568",
+        "b": "A0562",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0671 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0568",
+        "b": "A0564",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0671 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0568",
+        "b": "A0561",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0568",
+        "b": "A0563",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0563",
+        "b": "A0561",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0670 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0563",
+        "b": "A0562",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0563",
+        "b": "A0564",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0564",
+        "b": "A0562",
+        "kinds": [
+          "shared_device",
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          },
+          {
+            "kind": "shared_device",
+            "detail": "shared device D0671 (4 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0564",
+        "b": "A0561",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      },
+      {
+        "a": "A0561",
+        "b": "A0562",
+        "kinds": [
+          "shared_subnet"
+        ],
+        "evidence": [
+          {
+            "kind": "shared_subnet",
+            "detail": "shared subnet 45.77.12.x (8 new accounts)"
+          }
+        ]
+      }
+    ],
+    "score": 0.86,
+    "evidence_kinds": {
+      "shared_device": 12,
+      "shared_subnet": 28,
+      "mule_payee": 8,
+      "rapid_movement": 1
+    },
+    "evidence": [
+      "sent \u20b910,387 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b910,766 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b922,550 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b928,750 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b95,697 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b96,563 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b98,015 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b98,642 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h",
+      "shared device D0670 (4 new accounts)",
+      "shared device D0671 (4 new accounts)",
+      "shared subnet 45.77.12.x (8 new accounts)"
+    ],
+    "mules": [
+      "A0549"
+    ],
+    "evidence_txns": [
+      "T012953",
+      "T016296",
+      "T016352",
+      "T016491",
+      "T017497",
+      "T017821",
+      "T017861",
+      "T018095",
+      "T018328",
+      "T018441",
+      "T018457",
+      "T018458",
+      "T019070",
+      "T019211",
+      "T019453",
+      "T019717",
+      "T019761",
+      "T019910",
+      "T019933",
+      "T020070",
+      "T020239",
+      "T020507",
+      "T020576",
+      "T020589",
+      "T020590",
+      "T020601",
+      "T020608",
+      "T020661",
+      "T020840",
+      "T021256",
+      "T021359",
+      "T021521",
+      "T021958",
+      "T021969",
+      "T021979",
+      "T021991",
+      "T022552",
+      "T022679",
+      "T022680",
+      "T022682",
+      "T022762",
+      "T022875",
+      "T022903",
+      "T023303",
+      "T023313",
+      "T023367",
+      "T023575",
+      "T023972",
+      "T024025",
+      "T024034",
+      "T024464",
+      "T024778",
+      "T025026",
+      "T025357",
+      "T025463",
+      "T025608",
+      "T025748",
+      "T025838",
+      "T025916",
+      "T026214",
+      "T026256",
+      "T026874",
+      "T026887",
+      "T027227",
+      "T027702",
+      "T027931",
+      "T028204",
+      "T028205",
+      "T029683",
+      "T030231",
+      "T030426",
+      "T030694",
+      "T031659",
+      "T032747",
+      "T033944",
+      "T035820",
+      "T038092",
+      "T038450",
+      "T038761",
+      "T039015",
+      "T039101",
+      "T039744",
+      "T040850"
+    ],
+    "synthetic_identities": [
+      "A0561",
+      "A0562",
+      "A0563",
+      "A0564",
+      "A0565",
+      "A0566",
+      "A0567",
+      "A0568"
+    ],
+    "ring_risk": 90.2,
+    "band": "CRITICAL",
+    "evidence_breakdown": [
+      {
+        "kind": "mule_payee",
+        "label": "Common beneficiary (mule)",
+        "weight": 0.6,
+        "detail": "8 account links \u00b7 e.g. sent \u20b910,387 to A0549, which passed 98% of its inflows to gift cards/crypto within 24h"
+      },
+      {
+        "kind": "shared_device",
+        "label": "Shared device (new accounts)",
+        "weight": 0.5,
+        "detail": "12 account links \u00b7 e.g. shared device D0670 (4 new accounts)"
+      },
+      {
+        "kind": "shared_subnet",
+        "label": "Shared IP range",
+        "weight": 0.3,
+        "detail": "28 account links \u00b7 e.g. shared subnet 45.77.12.x (8 new accounts)"
+      },
+      {
+        "kind": "rapid_movement",
+        "label": "Rapid fund movement",
+        "weight": 0.3,
+        "detail": "beneficiary passed funds on to crypto/gift cards 3.2h after receiving them (median)"
+      }
+    ],
+    "devices": [
+      "D0670",
+      "D0671"
+    ],
+    "all_devices": [
+      "D0653",
+      "D0670",
+      "D0671"
+    ],
+    "merchants": [
+      "AquaBill",
+      "BuyNest",
+      "CartKart",
+      "CoinSwift Exchange",
+      "MegaByte Store",
+      "PowerGrid Pay",
+      "QuickPay Recharge",
+      "RailEase",
+      "ShopSphere",
+      "SkyTrail Travels"
+    ],
+    "beneficiaries": [
+      "A0549"
+    ],
+    "locations": [
+      "Bengaluru",
+      "Chennai",
+      "Coimbatore",
+      "Kochi",
+      "Pune"
+    ],
+    "collusive_merchants": [],
+    "peak_window": {
+      "members_active": 2,
+      "span_min": 43.1,
+      "start": "2026-08-31 06:52:03",
+      "end": "2026-08-31 07:35:12"
+    },
+    "dna_similarity": 0.705,
+    "first_seen": "2026-08-19 18:55:12",
+    "last_seen": "2026-09-29 16:36:08",
+    "amount_inr": 421793.78,
+    "recommended_action": "BLOCK + INVESTIGATE (critical ring)",
+    "actions": [
+      {
+        "step": "Freeze suspicious pathway",
+        "detail": "Block outgoing payouts from beneficiary/mule account(s) A0549 and hold inbound transfers to them."
+      },
+      {
+        "step": "Investigate linked accounts",
+        "detail": "Open one case for 8 member accounts: A0561, A0562, A0563, A0564, A0565, A0566, A0567, A0568."
+      },
+      {
+        "step": "Review shared devices",
+        "detail": "Check device fingerprints D0670, D0671 for other accounts; block the device IDs for new sign-ups."
+      },
+      {
+        "step": "Review beneficiaries",
+        "detail": "Verify beneficiaries A0549; flag them for confirmation-of-payee warnings."
+      },
+      {
+        "step": "Escalate to fraud analyst",
+        "detail": "Assign to the financial-crime team; file a suspicious transaction report if the investigation confirms coordinated fraud."
+      }
+    ]
+  },
+  {
+    "ring_id": "FR-003",
+    "members": [
+      "A0028",
+      "A0031",
+      "A0073",
+      "A0158",
+      "A0186",
+      "A0222"
+    ],
+    "size": 6,
+    "pattern": "Merchant collusion: accounts pushing round-amount purchases through a newly onboarded merchant in coordinated bursts",
+    "edges": [
+      {
+        "a": "A0186",
+        "b": "A0028",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0186",
+        "b": "A0031",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0186",
+        "b": "A0073",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0186",
+        "b": "A0158",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0186",
+        "b": "A0222",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0222",
+        "b": "A0028",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0222",
+        "b": "A0031",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0222",
+        "b": "A0073",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0222",
+        "b": "A0158",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0031",
+        "b": "A0028",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0031",
+        "b": "A0073",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0031",
+        "b": "A0158",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0073",
+        "b": "A0028",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0073",
+        "b": "A0158",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      },
+      {
+        "a": "A0028",
+        "b": "A0158",
+        "kinds": [
+          "collusive_merchant"
+        ],
+        "evidence": [
+          {
+            "kind": "collusive_merchant",
+            "detail": "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+          }
+        ]
+      }
+    ],
+    "score": 0.55,
+    "evidence_kinds": {
+      "collusive_merchant": 15,
+      "coordinated_timing": 1,
+      "dna_similarity": 1
+    },
+    "evidence": [
+      "customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+    ],
+    "mules": [],
+    "evidence_txns": [
+      "T032323",
+      "T032327",
+      "T032329",
+      "T032330",
+      "T032331",
+      "T032332",
+      "T033679",
+      "T033680",
+      "T033681",
+      "T033685",
+      "T033686",
+      "T033687",
+      "T035080",
+      "T035088",
+      "T035089",
+      "T035091"
+    ],
+    "synthetic_identities": [],
+    "ring_risk": 86.5,
+    "band": "CRITICAL",
+    "evidence_breakdown": [
+      {
+        "kind": "collusive_merchant",
+        "label": "Collusive merchant",
+        "weight": 0.55,
+        "detail": "15 account links \u00b7 e.g. customer of QuickDeals Online, onboarded 46 days into the period: 100% round-amount sales, up to 6 accounts buying within 30 minutes"
+      },
+      {
+        "kind": "coordinated_timing",
+        "label": "Coordinated timing",
+        "weight": 0.5,
+        "detail": "6 of 6 accounts active within 20 minutes"
+      },
+      {
+        "kind": "dna_similarity",
+        "label": "Behavioural similarity (Fraud DNA)",
+        "weight": 0.4,
+        "detail": "average pairwise behavioural similarity 98%"
+      }
+    ],
+    "devices": [
+      "D0031",
+      "D0035",
+      "D0086",
+      "D0186",
+      "D0222",
+      "D0261"
+    ],
+    "all_devices": [
+      "D0031",
+      "D0035",
+      "D0086",
+      "D0186",
+      "D0222",
+      "D0261"
+    ],
+    "merchants": [
+      "QuickDeals Online"
+    ],
+    "beneficiaries": [],
+    "locations": [
+      "Chennai",
+      "Hyderabad",
+      "Kochi",
+      "Mumbai",
+      "Pune"
+    ],
+    "collusive_merchants": [
+      "QuickDeals Online"
+    ],
+    "peak_window": {
+      "members_active": 6,
+      "span_min": 19.8,
+      "start": "2026-09-16 23:04:55",
+      "end": "2026-09-16 23:24:43"
+    },
+    "dna_similarity": 0.982,
+    "first_seen": "2026-09-16 23:04:55",
+    "last_seen": "2026-09-20 23:34:12",
+    "amount_inr": 279984.0,
+    "recommended_action": "BLOCK + INVESTIGATE (critical ring)",
+    "actions": [
+      {
+        "step": "Suspend merchant settlement",
+        "detail": "Hold settlement for QuickDeals Online pending merchant review."
+      },
+      {
+        "step": "Investigate linked accounts",
+        "detail": "Open one case for 6 member accounts: A0028, A0031, A0073, A0158, A0186, A0222."
+      },
+      {
+        "step": "Review shared devices",
+        "detail": "Check device fingerprints D0031, D0035, D0086, D0186, D0222, D0261 for other accounts; block the device IDs for new sign-ups."
+      },
+      {
+        "step": "Escalate to fraud analyst",
+        "detail": "Assign to the financial-crime team; file a suspicious transaction report if the investigation confirms coordinated fraud."
+      }
+    ]
+  },
+  {
+    "ring_id": "FR-004",
+    "members": [
+      "A0172",
+      "A0204",
+      "A0315",
+      "A0348",
+      "A0432",
+      "A0550"
+    ],
+    "size": 6,
+    "pattern": "Mule cash-out: 5 accounts sent money to one mule account, consistent with compromised accounts being drained",
+    "edges": [
+      {
+        "a": "A0204",
+        "b": "A0550",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b949,779 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0432",
+        "b": "A0550",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b930,516 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0348",
+        "b": "A0550",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b922,361 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0172",
+        "b": "A0550",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b932,682 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      },
+      {
+        "a": "A0315",
+        "b": "A0550",
+        "kinds": [
+          "mule_payee"
+        ],
+        "evidence": [
+          {
+            "kind": "mule_payee",
+            "detail": "sent \u20b923,046 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h"
+          }
+        ]
+      }
+    ],
+    "score": 0.6,
+    "evidence_kinds": {
+      "mule_payee": 5,
+      "dna_similarity": 1,
+      "rapid_movement": 1
+    },
+    "evidence": [
+      "sent \u20b922,361 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b923,046 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b930,516 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b932,682 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h",
+      "sent \u20b949,779 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h"
+    ],
+    "mules": [
+      "A0550"
+    ],
+    "evidence_txns": [
+      "T021962",
+      "T021992",
+      "T031691",
+      "T031711",
+      "T032344",
+      "T032350",
+      "T033712",
+      "T033713",
+      "T034403",
+      "T034454"
+    ],
+    "synthetic_identities": [],
+    "ring_risk": 83.2,
+    "band": "CRITICAL",
+    "evidence_breakdown": [
+      {
+        "kind": "mule_payee",
+        "label": "Common beneficiary (mule)",
+        "weight": 0.6,
+        "detail": "5 account links \u00b7 e.g. sent \u20b922,361 to A0550, which passed 93% of its inflows to gift cards/crypto within 24h"
+      },
+      {
+        "kind": "dna_similarity",
+        "label": "Behavioural similarity (Fraud DNA)",
+        "weight": 0.4,
+        "detail": "average pairwise behavioural similarity 100%"
+      },
+      {
+        "kind": "rapid_movement",
+        "label": "Rapid fund movement",
+        "weight": 0.3,
+        "detail": "beneficiary passed funds on to crypto/gift cards 3.7h after receiving them (median)"
+      }
+    ],
+    "devices": [
+      "D0654",
+      "D0694",
+      "D0695",
+      "D0696",
+      "D0697",
+      "D0698"
+    ],
+    "all_devices": [
+      "D0654",
+      "D0694",
+      "D0695",
+      "D0696",
+      "D0697",
+      "D0698"
+    ],
+    "merchants": [
+      "CoinSwift Exchange"
+    ],
+    "beneficiaries": [
+      "A0550"
+    ],
+    "locations": [
+      "Bangkok",
+      "Dubai",
+      "Frankfurt",
+      "Kochi",
+      "London",
+      "Singapore"
+    ],
+    "collusive_merchants": [],
+    "peak_window": {
+      "members_active": 1,
+      "span_min": 0.0,
+      "start": "2026-09-02 03:32:29",
+      "end": "2026-09-02 03:32:29"
+    },
+    "dna_similarity": 0.996,
+    "first_seen": "2026-09-02 03:32:29",
+    "last_seen": "2026-09-20 09:10:55",
+    "amount_inr": 306149.49,
+    "recommended_action": "BLOCK + INVESTIGATE (critical ring)",
+    "actions": [
+      {
+        "step": "Freeze suspicious pathway",
+        "detail": "Block outgoing payouts from beneficiary/mule account(s) A0550 and hold inbound transfers to them."
+      },
+      {
+        "step": "Investigate linked accounts",
+        "detail": "Open one case for 5 member accounts: A0172, A0204, A0315, A0348, A0432."
+      },
+      {
+        "step": "Review shared devices",
+        "detail": "Check device fingerprints D0654, D0694, D0695, D0696, D0697, D0698 for other accounts; block the device IDs for new sign-ups."
+      },
+      {
+        "step": "Review beneficiaries",
+        "detail": "Verify beneficiaries A0550; flag them for confirmation-of-payee warnings."
+      },
+      {
+        "step": "Escalate to fraud analyst",
+        "detail": "Assign to the financial-crime team; file a suspicious transaction report if the investigation confirms coordinated fraud."
+      }
+    ]
+  }
+]

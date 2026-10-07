@@ -1,0 +1,175 @@
+{
+  "threshold": 61,
+  "transactions": {
+    "final (all layers)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "tp": 309,
+      "fp": 0,
+      "fn": 0,
+      "tn": 40838
+    },
+    "transaction risk only": {
+      "precision": 0.9611,
+      "recall": 0.5599,
+      "f1": 0.7076,
+      "fpr": 0.000171,
+      "tp": 173,
+      "fp": 7,
+      "fn": 136,
+      "tn": 40831
+    },
+    "real-time rules only": {
+      "precision": 1.0,
+      "recall": 0.4239,
+      "f1": 0.5955,
+      "fpr": 0.0,
+      "tp": 131,
+      "fp": 0,
+      "fn": 178,
+      "tn": 40838
+    },
+    "ML model only (p >= 0.5)": {
+      "precision": 0.7412,
+      "recall": 0.89,
+      "f1": 0.8088,
+      "fpr": 0.002351,
+      "tp": 275,
+      "fp": 96,
+      "fn": 34,
+      "tn": 40742
+    },
+    "Isolation Forest only": {
+      "precision": 0.3615,
+      "recall": 0.1521,
+      "f1": 0.2141,
+      "fpr": 0.002032,
+      "tp": 47,
+      "fp": 83,
+      "fn": 262,
+      "tn": 40755
+    },
+    "behavioral deviation only": {
+      "precision": 0.9474,
+      "recall": 0.0583,
+      "f1": 0.1098,
+      "fpr": 2.4e-05,
+      "tp": 18,
+      "fp": 1,
+      "fn": 291,
+      "tn": 40837
+    },
+    "naive: flag top 1% amounts": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "fpr": 0.010089,
+      "tp": 0,
+      "fp": 412,
+      "fn": 309,
+      "tn": 40426
+    }
+  },
+  "roc_auc": {
+    "final": 1.0,
+    "transaction": 0.9904,
+    "behavioral": 0.7233,
+    "network": 0.9257,
+    "ml_model": 0.9989,
+    "isolation_forest": 0.8523,
+    "lof": 0.8953,
+    "amount": 0.6679
+  },
+  "average_precision": 1.0,
+  "confusion_matrix": [
+    [
+      40838,
+      0
+    ],
+    [
+      0,
+      309
+    ]
+  ],
+  "recall_by_pattern": {
+    "account_takeover": 1.0,
+    "card_testing": 1.0,
+    "device_farm": 1.0,
+    "merchant_collusion": 1.0,
+    "mule_activity": 1.0,
+    "mule_cashout": 1.0,
+    "sequence_ring": 1.0,
+    "structuring": 1.0
+  },
+  "false_alarms_on_benign_lookalikes": {
+    "business": {
+      "transactions": 1149,
+      "flagged": 0
+    },
+    "crypto_hobby": {
+      "transactions": 51,
+      "flagged": 0
+    },
+    "high_value": {
+      "transactions": 40,
+      "flagged": 0
+    },
+    "hni_high_value": {
+      "transactions": 61,
+      "flagged": 0
+    },
+    "rent": {
+      "transactions": 120,
+      "flagged": 0
+    },
+    "shared_device": {
+      "transactions": 513,
+      "flagged": 0
+    },
+    "travel": {
+      "transactions": 269,
+      "flagged": 0
+    }
+  },
+  "accounts": {
+    "flagged (risk >= 61)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "fpr": 0.0,
+      "tp": 38,
+      "fp": 0,
+      "fn": 0,
+      "tn": 530
+    },
+    "roc_auc": 1.0
+  },
+  "rings": [
+    {
+      "true_ring": "ATO",
+      "size": 6,
+      "matched": "FR-004",
+      "jaccard": 1.0
+    },
+    {
+      "true_ring": "R1",
+      "size": 11,
+      "matched": "FR-001",
+      "jaccard": 1.0
+    },
+    {
+      "true_ring": "R2",
+      "size": 9,
+      "matched": "FR-002",
+      "jaccard": 1.0
+    },
+    {
+      "true_ring": "R4",
+      "size": 6,
+      "matched": "FR-003",
+      "jaccard": 1.0
+    }
+  ]
+}

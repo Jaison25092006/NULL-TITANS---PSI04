@@ -1,0 +1,29 @@
+{
+  "transactions": 41147,
+  "accounts": 568,
+  "rings": 4,
+  "flagged": 309,
+  "model": "Random Forest",
+  "weights": {
+    "transaction": 0.45,
+    "behavioral": 0.25,
+    "network": 0.3
+  },
+  "period": [
+    "2026-08-01 06:06:00",
+    "2026-09-29 23:58:00"
+  ],
+  "seconds": {
+    "preprocessing": 0.05,
+    "transaction features": 1.17,
+    "behavioral profiling": 1.7,
+    "anomaly detection": 0.66,
+    "supervised model": 0.08,
+    "transaction risk": 0.14,
+    "graph + ring detection": 4.32,
+    "temporal + Fraud DNA + rings": 2.37,
+    "network risk": 0.22,
+    "final risk + explanations": 0.4,
+    "account risk": 3.26
+  }
+}

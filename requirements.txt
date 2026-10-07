@@ -1,0 +1,9 @@
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4,<2
+networkx>=3.2
+streamlit>=1.48
+plotly>=5.20
+# optional: exact SHAP values for tree models (the app falls back to an exact
+# model-agnostic method when it is not installed)
+# shap>=0.45

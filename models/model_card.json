@@ -1,0 +1,157 @@
+{
+  "name": "Random Forest",
+  "features": [
+    "f_log_amount",
+    "f_amount_z",
+    "f_new_device",
+    "f_hour",
+    "f_night",
+    "f_velocity_1h",
+    "f_account_age",
+    "f_foreign",
+    "f_risky_category",
+    "f_transfer",
+    "f_device_accounts",
+    "f_payee_senders",
+    "f_payee_young",
+    "f_new_payee",
+    "f_pass_through",
+    "f_business",
+    "f_near_threshold",
+    "b_amount",
+    "b_device",
+    "b_location",
+    "b_time",
+    "b_velocity",
+    "b_merchant",
+    "b_beneficiary"
+  ],
+  "comparison": {
+    "Logistic Regression": {
+      "precision": 0.0776,
+      "recall": 0.934,
+      "f1": 0.1432,
+      "roc_auc": 0.9766,
+      "average_precision": 0.4954
+    },
+    "Random Forest": {
+      "precision": 0.7028,
+      "recall": 0.8785,
+      "f1": 0.7809,
+      "roc_auc": 0.9988,
+      "average_precision": 0.9148
+    },
+    "Gradient Boosting": {
+      "precision": 0.9211,
+      "recall": 0.7292,
+      "f1": 0.814,
+      "roc_auc": 0.9982,
+      "average_precision": 0.8977
+    }
+  },
+  "importance": [
+    [
+      "f_account_age",
+      0.5656206261385434
+    ],
+    [
+      "f_log_amount",
+      0.13624698126998305
+    ],
+    [
+      "f_device_accounts",
+      0.1327490573632271
+    ],
+    [
+      "f_business",
+      0.07548509929196867
+    ],
+    [
+      "f_hour",
+      0.050907533351057355
+    ],
+    [
+      "b_merchant",
+      0.04062756411820512
+    ],
+    [
+      "f_amount_z",
+      0.03820983633680908
+    ],
+    [
+      "b_amount",
+      0.024352178067159797
+    ],
+    [
+      "f_new_device",
+      0.02180687245273479
+    ],
+    [
+      "f_risky_category",
+      0.01900486944601913
+    ],
+    [
+      "f_velocity_1h",
+      0.015528046997191495
+    ],
+    [
+      "f_near_threshold",
+      0.009629779773175287
+    ],
+    [
+      "b_beneficiary",
+      0.009076090379155096
+    ],
+    [
+      "b_velocity",
+      0.007742060555342471
+    ],
+    [
+      "b_time",
+      0.007729679270351879
+    ],
+    [
+      "b_device",
+      0.0071119700378840705
+    ],
+    [
+      "f_transfer",
+      0.005179167854655664
+    ],
+    [
+      "f_payee_senders",
+      0.0022177343719610443
+    ],
+    [
+      "f_pass_through",
+      0.0017166153331128105
+    ],
+    [
+      "b_location",
+      3.214612837324863e-05
+    ],
+    [
+      "f_foreign",
+      1.4984074813188345e-05
+    ],
+    [
+      "f_payee_young",
+      0.0
+    ],
+    [
+      "f_night",
+      -3.4324107120046556e-05
+    ],
+    [
+      "f_new_payee",
+      -0.00013019041277787893
+    ]
+  ],
+  "train_seeds": [
+    11,
+    13
+  ],
+  "train_rows": 81901,
+  "train_fraud": 584,
+  "sklearn": "1.9.1"
+}
