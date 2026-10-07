@@ -16,7 +16,7 @@ secrets are used.
 
 [![Fraud Intelligence demo: a ₹5,00,000 legit transfer scores 0 (ALLOW) while a ₹48,000 account takeover scores 98 (BLOCK)](demo/thumbnail.jpg)](demo/fraud-intelligence-demo.mp4)
 
-**[▶ Watch the demo video](demo/fraud-intelligence-demo.mp4)** (`demo/fraud-intelligence-demo.mp4`, 2:08, 1080p, with voice-over and captions).
+**[▶ Watch the demo video](demo/fraud-intelligence-demo.mp4)** (`demo/fraud-intelligence-demo.mp4`, 2:08, 720p, with voice-over and captions).
 It walks through the live monitor, a transaction investigation with all three risk scores,
 the network graph, fraud ring FR-001, explainable AI, recommended actions, the
 false-positive test (legit ₹5,00,000 → ALLOW vs ₹48,000 takeover → BLOCK), a sample
@@ -392,7 +392,7 @@ demo/                        2-minute demo video + thumbnail
 
 - **Locally:** `streamlit run app.py`, then follow the *Demo flow* above or the in-app **Demo Guide** page.
 - **Hosted:** deploy to Streamlit Community Cloud (see above) and share the URL.
-- **Recorded demo:** [demo/fraud-intelligence-demo.mp4](demo/fraud-intelligence-demo.mp4) (2:08, 1080p, voice-over + captions).
+- **Recorded demo:** [demo/fraud-intelligence-demo.mp4](demo/fraud-intelligence-demo.mp4) (2:08, 720p, voice-over + captions).
 
 ## Limitations
 
