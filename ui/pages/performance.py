@@ -164,6 +164,7 @@ def render():
             "fraud_accounts_caught": "Fraud accounts", "innocent_accounts_flagged": "Innocent flagged",
             "rings_exact": "Rings exact", "lookalike_false_alarms": "Look-alike FPs"}),
             hide_index=True, width="stretch")
+    real_world()
     card = state.model_card()
     if card:
         st.markdown("### ML model card")
@@ -175,3 +176,46 @@ def render():
                    f"{card.get('train_seeds', [0])[-1]} before the final refit. "
                    f"Its weight in Transaction Risk is capped (0.6 × p), so it cannot block on "
                    f"its own.")
+
+
+def real_world():
+    """Web-scraped calibration experiment and the public PaySim benchmark."""
+    import json
+    cal_p, bench_p = state.EVAL / "calibrated_experiment.json", state.EVAL / "benchmark_paysim.json"
+    if not cal_p.exists() and not bench_p.exists():
+        return
+    st.markdown("### Real-world data: web-scraped calibration and a public benchmark")
+    if cal_p.exists():
+        cal = json.loads(cal_p.read_text("utf-8"))
+        c = cal["calibration"]
+        st.markdown(f"**Generator calibrated to web-scraped statistics.** The real average UPI "
+                    f"ticket is ₹{c['target_avg_ticket_inr']:,.0f} (NPCI figures for "
+                    f"{c['target_years'][0]}–{c['target_years'][-1]}, scraped from Wikipedia), "
+                    f"giving amount scale {c['amount_scale']}. Fraud victims are placed using "
+                    f"scraped NCRB state crime rates.")
+        st.dataframe(pd.DataFrame(cal["runs"]).drop(columns=["victim_cities"]).rename(columns={
+            "seed": "Seed", "transactions": "Transactions", "everyday_mean_inr": "Everyday mean ₹",
+            "target_avg_ticket_inr": "Target ₹", "txn_precision": "Precision",
+            "txn_recall": "Recall", "txn_f1": "F1", "txn_false_alarms": "False alarms",
+            "txn_fpr": "FPR", "roc_auc": "ROC-AUC", "fraud_accounts_caught": "Fraud accounts",
+            "innocent_accounts_flagged": "Innocent flagged", "rings_exact": "Rings exact"}),
+            hide_index=True, width="stretch")
+    if bench_p.exists():
+        b = json.loads(bench_p.read_text("utf-8"))
+        d = b["design"]
+        st.markdown(f"**Public benchmark: PaySim** (Lopez-Rojas et al., 2016). The sample is "
+                    f"{d['sample_rows']:,} transactions ({d['sample_fraud']} fraud), with a time "
+                    f"split at simulation hour {d['time_split_step']} and {d['test_fraud']} fraud "
+                    f"cases in the test part. Precision is also re-weighted to PaySim's natural "
+                    f"{100 * d['natural_fraud_rate']:.2f}% fraud rate.")
+        st.dataframe(pd.DataFrame([{"Approach": k, "Recall": v["recall"],
+                                    "Precision (natural rate)": v["precision_natural_rate"],
+                                    "FPR": v["fpr"], "ROC-AUC": v["roc_auc"]}
+                                   for k, v in b["results"].items()]),
+                     hide_index=True, width="stretch")
+        st.caption("The unchanged system is built for multi-entity rings and flags none of "
+                   "PaySim's single-pattern fraud (transfer, then cash-out of the drained "
+                   "balance): this is domain shift. PaySim's balance fields make it nearly "
+                   "separable. Our engineered features still reach AUC 0.92 when retrained, and "
+                   "the hybrid combines both. No PaySim-specific rule was added after seeing "
+                   "these results.")

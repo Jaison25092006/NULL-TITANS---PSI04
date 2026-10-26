@@ -1,0 +1,131 @@
+{
+  "source": {
+    "dataset": "PaySim (Lopez-Rojas, Elmir & Axelsson, 2016)",
+    "mirror": "huggingface.co/datasets/flwrlabs/fed-fraud-paysim-banks",
+    "license": "CC BY 4.0",
+    "split": "test"
+  },
+  "design": {
+    "rows_in_split": 636262,
+    "natural_fraud_rate": 0.00129,
+    "sample_rows": 24821,
+    "sample_fraud": 821,
+    "sample_fraud_rate": 0.03308,
+    "time_split_step": 250,
+    "train_rows": 12498,
+    "test_rows": 12323,
+    "test_fraud": 566,
+    "legit_sample_seed": 0
+  },
+  "results": {
+    "A. Our system, zero-shot (final risk \u2265 61)": {
+      "precision_sample": 0.0,
+      "precision_natural_rate": 0.0,
+      "recall": 0.0,
+      "f1_sample": 0.0,
+      "fpr": 0.0,
+      "roc_auc": 0.7911,
+      "average_precision": 0.1339,
+      "tp": 0,
+      "fp": 0,
+      "fn": 566,
+      "tn": 11757
+    },
+    "A2. Our transaction-risk score only, zero-shot": {
+      "precision_sample": 0.0,
+      "precision_natural_rate": 0.0,
+      "recall": 0.0,
+      "f1_sample": 0.0,
+      "fpr": 0.0,
+      "roc_auc": 0.7911,
+      "average_precision": 0.1339,
+      "tp": 0,
+      "fp": 0,
+      "fn": 566,
+      "tn": 11757
+    },
+    "B. Random Forest on PaySim balance fields (retrained)": {
+      "precision_sample": 1.0,
+      "precision_natural_rate": 1.0,
+      "recall": 0.9965,
+      "f1_sample": 0.9982,
+      "fpr": 0.0,
+      "roc_auc": 1.0,
+      "average_precision": 1.0,
+      "tp": 564,
+      "fp": 0,
+      "fn": 2,
+      "tn": 11757
+    },
+    "C. Random Forest on our engineered features (retrained)": {
+      "precision_sample": 0.555,
+      "precision_natural_rate": 0.045,
+      "recall": 0.5442,
+      "f1_sample": 0.5495,
+      "fpr": 0.02101,
+      "roc_auc": 0.919,
+      "average_precision": 0.5492,
+      "tp": 308,
+      "fp": 247,
+      "fn": 258,
+      "tn": 11510
+    },
+    "D. Hybrid: our features + balance fields (retrained)": {
+      "precision_sample": 1.0,
+      "precision_natural_rate": 1.0,
+      "recall": 0.9965,
+      "f1_sample": 0.9982,
+      "fpr": 0.0,
+      "roc_auc": 1.0,
+      "average_precision": 1.0,
+      "tp": 564,
+      "fp": 0,
+      "fn": 2,
+      "tn": 11757
+    }
+  },
+  "hybrid_top_features": [
+    [
+      "errorBalanceOrig",
+      0.3338
+    ],
+    [
+      "oldbalanceOrg",
+      0.1026
+    ],
+    [
+      "f_new_payee",
+      0.0884
+    ],
+    [
+      "newbalanceOrig",
+      0.0877
+    ],
+    [
+      "f_payee_senders",
+      0.0752
+    ],
+    [
+      "f_transfer",
+      0.0613
+    ],
+    [
+      "f_log_amount",
+      0.0438
+    ],
+    [
+      "amount",
+      0.0352
+    ],
+    [
+      "type_TRANSFER",
+      0.0312
+    ],
+    [
+      "newbalanceDest",
+      0.0277
+    ]
+  ],
+  "rings_found_zero_shot": "see run log",
+  "seconds": 407.5
+}

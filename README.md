@@ -14,9 +14,7 @@ secrets are used.
 
 ## 🎬 Demo video (2 min)
 
-
 https://github.com/user-attachments/assets/eab615c9-60c0-456b-b61a-1b977d89b66a
-
 
 [![Fraud Intelligence demo: a ₹5,00,000 legit transfer scores 0 (ALLOW) while a ₹48,000 account takeover scores 98 (BLOCK)](demo/thumbnail.jpg)](demo/fraud-intelligence-demo.mp4)
 
@@ -65,6 +63,51 @@ is trained on seeds 11 and 13, so none of these seeds were used in training.
 > seeds 7 and 42 check did catch two real bugs: a rare-but-legitimate merchant mistaken for
 > a collusive one, and "synthetic identity" status spreading across a merged ring. Both
 > were fixed in the general logic, not tuned per seed.
+
+### Real-world data: web-scraped calibration and a public benchmark
+
+Two experiments test the system beyond our own synthetic data.
+
+**1. Generator calibrated to web-scraped real statistics.**
+`scraping/scrape_public_stats.py` scrapes two real tables through the official Wikipedia API:
+- the NPCI-sourced yearly UPI volume and value table, 2016–2025, which gives the real average UPI ticket size
+- NCRB state-wise crime rates, 2016–2019
+
+Source pages, revisions and the cleaning steps are documented in
+[`data/scraped/README.md`](data/scraped/README.md). RBI and NPCI block automated access,
+so they are cited as manual references only. `scraping/calibrate.py` then derives two
+parameters:
+- `amount_scale` = 0.946: synthetic everyday payments averaged ₹1,673 against a real ₹1,582, so they were already within 6% of reality
+- `city_risk_weight`: fraud victims are placed according to the scraped state crime rates
+
+Running the unchanged detector on calibrated datasets (`python eval/calibrated_experiment.py`):
+
+| Seed | Everyday mean (target ₹1,582) | Precision | Recall | False alarms | Fraud accounts | Innocent flagged | Rings |
+|---|---|---|---|---|---|---|---|
+| 2026 | ₹1,582 | 1.000 | 0.997 | 0 | 38/38 | 1 | 4/4 |
+| 7 | ₹1,702 | 1.000 | 1.000 | 0 | 38/38 | 0 | 4/4 |
+| 42 | ₹1,655 | 1.000 | 0.997 | 0 | 38/38 | 1 | 4/4 |
+
+**2. Public benchmark: PaySim** (Lopez-Rojas et al., 2016; 636k-transaction test split,
+CC BY 4.0, Hugging Face mirror `flwrlabs/fed-fraud-paysim-banks`).
+`python eval/benchmark_paysim.py` builds its sample from all 821 frauds plus 24,000
+legitimate transactions, kept in time order. Earlier simulation hours train and later hours
+test (566 test frauds). Because legitimate rows are subsampled, precision is also
+re-weighted to PaySim's natural 0.13% fraud rate.
+
+| Approach (PaySim test hours) | Recall | Precision at natural rate | FPR | ROC-AUC |
+|---|---|---|---|---|
+| A. Our system, unchanged (zero-shot) | 0.000 | — | 0.0000 | 0.791 |
+| B. Random Forest on PaySim balance fields (retrained) | 0.997 | 1.000 | 0.0000 | 1.000 |
+| C. Random Forest on our engineered features (retrained) | 0.544 | 0.045 | 0.0210 | 0.919 |
+| D. Hybrid: our features + balance fields (retrained) | 0.997 | 1.000 | 0.0000 | 1.000 |
+
+**What this shows:**
+- **(A)** PaySim has no devices, locations or merchant sequences, and its fraud is a single pattern: a TRANSFER that empties the account, then a CASH_OUT. The unchanged system, built for multi-entity rings, therefore flags none of it at threshold 61. Its scores still rank fraud above legitimate transactions (AUC 0.79), but domain shift is real.
+- **(B)** PaySim's balance-error fields make it almost trivially separable. That is a known property of the dataset, and those fields are the top feature in (D).
+- **(C, D)** Our engineered features carry signal on an unseen simulator (AUC 0.92). The hybrid shows the architecture absorbs source-specific signals when they exist: our new-payee and payee-fan-in features rank among its top features.
+
+We did not add a PaySim-specific rule after seeing these results, because that would be tuning to the test set.
 
 ---
 
@@ -302,6 +345,10 @@ python -m fraud.fraud_model             # train the ML model on seeds 11 & 13 �
 python -m fraud.pipeline                # score everything → outputs/   (~20 s)
 python eval/evaluate.py                 # scorecard vs hidden labels → eval/scorecard.json
 python eval/robustness.py               # 7 seeds, in memory → eval/robustness.json
+python scraping/scrape_public_stats.py  # web-scrape UPI + NCRB tables → data/scraped/
+python scraping/calibrate.py            # scraped stats → data/scraped/calibration.json
+python eval/calibrated_experiment.py    # detector on calibrated datasets
+python eval/benchmark_paysim.py         # public PaySim benchmark (downloads 28 MB)
 python report.py                        # readable summary in the terminal
 streamlit run app.py                    # dashboard
 python -m unittest discover tests       # unit tests + dashboard smoke tests
@@ -356,6 +403,8 @@ eval/evaluate.py             scorecard vs hidden labels;  eval/robustness.py  un
 tests/                       unit tests and dashboard smoke tests
 samples/                     sample input → output (run_samples.py, inputs, generated outputs)
 demo/                        2-minute demo video + thumbnail
+scraping/                    web scraper (Wikipedia API) + generator calibration
+data/scraped/                scraped tables, sources.json, calibration.json
 ```
 
 ## Scope note
@@ -384,6 +433,8 @@ demo/                        2-minute demo video + thumbnail
 - Live stream replay and a Scenario Lab for scoring new transactions in real time
 - Upload of real datasets (PaySim, IEEE-CIS, generic CSV)
 - Robustness on 6 unseen datasets; unit tests and dashboard smoke tests
+- Web-scraped real statistics (UPI volumes/values, NCRB crime rates) used to calibrate the generator
+- Evaluation on the public PaySim benchmark, compared with retrained baselines
 
 **Not attempted / future work**
 

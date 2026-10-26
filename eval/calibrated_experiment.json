@@ -1,0 +1,92 @@
+{
+  "calibration": {
+    "amount_scale": 0.946,
+    "target_avg_ticket_inr": 1582.33,
+    "target_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "city_risk_weight": {
+      "Chennai": 0.8722,
+      "Coimbatore": 0.8722,
+      "Bengaluru": 0.3605,
+      "Mumbai": 0.6041,
+      "Pune": 0.6041,
+      "Delhi": 2.3045,
+      "Hyderabad": 0.5114,
+      "Kochi": 1.8709
+    }
+  },
+  "runs": [
+    {
+      "seed": 2026,
+      "transactions": 41136,
+      "everyday_mean_inr": 1582.38,
+      "target_avg_ticket_inr": 1582.33,
+      "victim_cities": {
+        "Mumbai": 2,
+        "Chennai": 2,
+        "Bengaluru": 2,
+        "Delhi": 2,
+        "Kochi": 2,
+        "Pune": 1
+      },
+      "txn_precision": 1.0,
+      "txn_recall": 0.9969,
+      "txn_f1": 0.9984,
+      "txn_false_alarms": 0,
+      "txn_fpr": 0.0,
+      "roc_auc": 1.0,
+      "fraud_accounts_caught": "38/38",
+      "innocent_accounts_flagged": 1,
+      "rings_exact": "4/4"
+    },
+    {
+      "seed": 7,
+      "transactions": 39977,
+      "everyday_mean_inr": 1701.76,
+      "target_avg_ticket_inr": 1582.33,
+      "victim_cities": {
+        "Kochi": 3,
+        "Coimbatore": 2,
+        "Hyderabad": 2,
+        "Chennai": 2,
+        "Delhi": 1,
+        "Bengaluru": 1
+      },
+      "txn_precision": 1.0,
+      "txn_recall": 1.0,
+      "txn_f1": 1.0,
+      "txn_false_alarms": 0,
+      "txn_fpr": 0.0,
+      "roc_auc": 1.0,
+      "fraud_accounts_caught": "38/38",
+      "innocent_accounts_flagged": 0,
+      "rings_exact": "4/4"
+    },
+    {
+      "seed": 42,
+      "transactions": 41480,
+      "everyday_mean_inr": 1654.79,
+      "target_avg_ticket_inr": 1582.33,
+      "victim_cities": {
+        "Kochi": 4,
+        "Chennai": 2,
+        "Coimbatore": 2,
+        "Mumbai": 1,
+        "Bengaluru": 1,
+        "Delhi": 1
+      },
+      "txn_precision": 1.0,
+      "txn_recall": 0.9969,
+      "txn_f1": 0.9985,
+      "txn_false_alarms": 0,
+      "txn_fpr": 0.0,
+      "roc_auc": 1.0,
+      "fraud_accounts_caught": "38/38",
+      "innocent_accounts_flagged": 1,
+      "rings_exact": "4/4"
+    }
+  ]
+}

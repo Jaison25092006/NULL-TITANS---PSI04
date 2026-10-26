@@ -1,0 +1,55 @@
+{
+  "amount_scale": 0.946,
+  "target_avg_ticket_inr": 1582.33,
+  "target_years": [
+    2023,
+    2024,
+    2025
+  ],
+  "synthetic_everyday_mean_inr": 1672.7,
+  "synthetic_everyday_n": 31356,
+  "city_risk_weight": {
+    "Chennai": 0.8722,
+    "Coimbatore": 0.8722,
+    "Bengaluru": 0.3605,
+    "Mumbai": 0.6041,
+    "Pune": 0.6041,
+    "Delhi": 2.3045,
+    "Hyderabad": 0.5114,
+    "Kochi": 1.8709
+  },
+  "city_state_map": {
+    "Chennai": "Tamil Nadu",
+    "Coimbatore": "Tamil Nadu",
+    "Bengaluru": "Karnataka",
+    "Mumbai": "Maharashtra",
+    "Pune": "Maharashtra",
+    "Delhi": "Delhi",
+    "Hyderabad": "Telangana",
+    "Kochi": "Kerala"
+  },
+  "state_crime_rate_2019": {
+    "Delhi": 1586.1,
+    "Karnataka": 248.1,
+    "Kerala": 1287.7,
+    "Maharashtra": 415.8,
+    "Tamil Nadu": 600.3,
+    "Telangana": 352.0
+  },
+  "sources": {
+    "upi_yearly": {
+      "title": "Unified Payments Interface",
+      "revid": 1380979044,
+      "rows": 10,
+      "file": "data/scraped/upi_yearly.csv",
+      "url": "https://en.wikipedia.org/w/index.php?title=Unified%20Payments%20Interface&oldid=1380979044"
+    },
+    "state_crime": {
+      "title": "Crime in India",
+      "revid": 1381076477,
+      "rows": 37,
+      "file": "data/scraped/state_crime.csv",
+      "url": "https://en.wikipedia.org/w/index.php?title=Crime%20in%20India&oldid=1381076477"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "retrieved_utc": "2026-10-26T06:48:10+00:00",
+  "method": "MediaWiki parse API (robots-compliant)",
+  "license": "CC BY-SA 4.0 (Wikipedia); primary sources cited on each page",
+  "tables": {
+    "upi_yearly": {
+      "title": "Unified Payments Interface",
+      "revid": 1380979044,
+      "rows": 10,
+      "file": "data/scraped/upi_yearly.csv",
+      "url": "https://en.wikipedia.org/w/index.php?title=Unified%20Payments%20Interface&oldid=1380979044"
+    },
+    "state_crime": {
+      "title": "Crime in India",
+      "revid": 1381076477,
+      "rows": 37,
+      "file": "data/scraped/state_crime.csv",
+      "url": "https://en.wikipedia.org/w/index.php?title=Crime%20in%20India&oldid=1381076477"
+    }
+  },
+  "manual_references": [
+    {
+      "name": "RBI Annual Report \u2014 frauds in the banking sector",
+      "url": "https://www.rbi.org.in/Scripts/AnnualReportPublications.aspx",
+      "note": "blocks automated access (HTTP 418); download manually"
+    },
+    {
+      "name": "NPCI UPI product statistics",
+      "url": "https://www.npci.org.in/what-we-do/upi/product-statistics",
+      "note": "blocks automated access (HTTP 403); download manually"
+    }
+  ]
+}

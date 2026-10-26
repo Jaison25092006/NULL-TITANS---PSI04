@@ -48,7 +48,19 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA, EVAL = ROOT / "data", ROOT / "eval"
 rng = np.random.default_rng(SEED)
 STRUCTURING_LIMIT = 50000   # structuring splits transfers to stay just under this amount
-STRUCTURING_LIMIT = 50000   # transfers are split to stay just under this amount
+
+# Optional calibration from web-scraped public statistics (scraping/calibrate.py).
+# Only applied with DATA_PROFILE=calibrated; the default dataset is unchanged.
+CAL = {}
+
+
+def load_calibration(profile):
+    if profile != "calibrated":
+        return {}
+    path = ROOT / "data" / "scraped" / "calibration.json"
+    if not path.exists():
+        raise FileNotFoundError("run scraping/scrape_public_stats.py and scraping/calibrate.py first")
+    return json.loads(path.read_text("utf-8"))
 
 START = pd.Timestamp("2026-08-01")
 DAYS = 60
@@ -172,6 +184,8 @@ class World:
                 cat = str(rng.choice(cats, p=a["cat_weights"]))
                 lo, hi = CATEGORIES[cat][:2]
                 amount = min(hi, lo * np.exp(rng.uniform(0, np.log(hi / lo))) * a["spend"])
+                if CAL:  # match real average UPI ticket size
+                    amount *= CAL["amount_scale"]
                 hour = float(np.clip(rng.normal(a["peak"], 3), 6, 23))
                 self.add(a, ts(day, hour), "purchase", amount, merchant=str(rng.choice(self.by_cat[cat])))
 
@@ -226,6 +240,15 @@ def build():
     households, renters, hobby = pick(36, 70), pick(60, 106), pick(25, 166)
     ato_victims, ct_victims = pick(5, 191), pick(3, 196)
     hni, colluders, structurers = pick(8, 199), pick(6, 207), pick(3, 213)
+    if CAL:  # victims live where the scraped NCRB crime rate is higher
+        taken = {id(a) for grp in (high_value, travellers, households, renters, hobby, hni,
+                                   colluders) for a in grp}
+        pool = [a for a in personal if id(a) not in taken]
+        wts = np.array([CAL["city_risk_weight"].get(a["home_city"], 1.0) for a in pool])
+        chosen = rng.choice(len(pool), size=11, replace=False, p=wts / wts.sum())
+        ato_victims = [pool[i] for i in chosen[:5]]
+        ct_victims = [pool[i] for i in chosen[5:8]]
+        structurers = [pool[i] for i in chosen[8:11]]
 
     for a in hni:  # premium customers: Rs 2-6 lakh to the same firms every week or two
         a["_tags"].add("hni_high_value")
@@ -382,13 +405,15 @@ def build():
     return w
 
 
-def generate(seed=SEED):
-    """Build the dataset for `seed` in memory.
+def generate(seed=SEED, profile=None):
+    """Build the dataset for `seed` in memory. profile="calibrated" applies the
+    web-scraped calibration (data/scraped/calibration.json); default is unchanged.
 
     Returns (transactions, accounts, merchants, transaction_labels, account_labels).
     """
-    global rng
+    global rng, CAL
     rng = np.random.default_rng(seed)
+    CAL = load_calibration(profile if profile is not None else os.environ.get("DATA_PROFILE"))
     w = build()
 
     # Device-farm and mule accounts are fake accounts run by fraudsters, so all their
