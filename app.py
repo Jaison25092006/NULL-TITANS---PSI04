@@ -43,7 +43,7 @@ nav.PAGES.update(PAGES)
 def sidebar():
     with st.sidebar:
         st.markdown("## 🛡️ Fraud Intelligence")
-        st.caption("HackNex 2026 · HNX26PSI04 · Real-Time Financial Fraud Intelligence")
+        st.caption("Real-Time Financial Fraud Intelligence")
 
         with st.expander("⚖️ Risk weights (configurable)", expanded=False):
             st.caption("Final = wT·Transaction + wB·Behavioral + wN·Network "

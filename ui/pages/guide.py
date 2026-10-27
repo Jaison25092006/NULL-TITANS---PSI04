@@ -47,7 +47,7 @@ STEPS = [
 
 
 def render():
-    hero("Demo Guide", "A 3–5 minute walkthrough that maps every requirement of HNX26PSI04 to the product")
+    hero("Demo Guide", "A 3–5 minute walkthrough that maps every requirement to the product")
     alert("<b>Traditional fraud detection asks:</b> “Is this transaction fraudulent?”<br>"
           "<b>We ask:</b> Is it unusual? Why? Who is it connected to? Is it part of a coordinated "
           "fraud ring? What evidence supports the decision? And what should the analyst do next?",
